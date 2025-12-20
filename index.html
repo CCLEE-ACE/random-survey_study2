@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study 2 Survey Router</title>
+</head>
+<body>
+  <script>
+    const surveys = [
+      "https://www.surveycake.com/s/8k7WQ",
+      "https://www.surveycake.com/s/blMMw",
+      "https://www.surveycake.com/s/4oKKy",
+      "https://www.surveycake.com/s/4oKKy"
+    ];
+
+    const index = Math.floor(Math.random() * surveys.length);
+    const target = surveys[index];
+
+    location.replace(target);
+  </script>
+</body>
+</html>
