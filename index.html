@@ -7,33 +7,29 @@
 </head>
 <body style="font-family: Arial; padding: 24px;">
   <h2>Study 2 問卷分配</h2>
-  <p>3 秒內為你隨機分配問卷，請稍候…</p>
+  <p>隨機分配問卷中，請稍候…</p>
   <p id="debug" style="margin-top: 12px;"></p>
 
   <script>
-    // 1) 把四份問卷網址放進陣列（請換成你的 SurveyCake 連結）
+    // 1) 把八份問卷網址放進陣列
     const surveys = [
       "https://www.surveycake.com/s/aaQ64",
+      "https://www.surveycake.com/s/xkdx8",
       "https://www.surveycake.com/s/dvdpz",
+      "https://www.surveycake.com/s/beMa1",
       "https://www.surveycake.com/s/1qXNK",
-      "https://www.surveycake.com/s/pbPmz"
-
+      "https://www.surveycake.com/s/LOBbK",
+      "https://www.surveycake.com/s/pbPmz",
+      "https://www.surveycake.com/s/XmQlM"
     ];
 
-    // 2) 隨機挑一份（0~3）
+    // 2) 隨機挑一份（0~7）
     const index = Math.floor(Math.random() * surveys.length);
 
-    // 3) 組別顯示用（1~4，比較符合人類直覺）
-    const group = index + 1;
-
-    // 4) 選出目標網址
+    // 3) 選出目標網址
     const target = surveys[index];
 
-    // 5) 顯示目前分配結果（讓你/受試者知道不是卡住）
-    document.getElementById("debug").textContent =
-      `本次分配：第 ${group} 份問卷`;
-
-    // 6) 3 秒後跳轉
+    // 4) 3 秒後跳轉
     setTimeout(() => {
       location.href = target;
     }, 3000);
